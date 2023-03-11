@@ -4,4 +4,4 @@ if __name__ == "__main__":
 
     a = 1
     b = 2
-    print("%d + %d = %d" % (a, b, file_add.add(a, b)))
+    print("{d} + {d} = {d}" % (a, b, file_add.add(a, b)))
