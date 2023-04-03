@@ -9,4 +9,8 @@ Rectangle
 
 
 class Rectangle:
+    '''
+       Rectangle class
+
+    '''
     pass
