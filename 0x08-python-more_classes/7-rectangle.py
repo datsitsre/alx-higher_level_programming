@@ -70,11 +70,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
+            hash_print = []
             for row in range(self.height):
-                for col in range(self.width):
-                    print("{}".format(self.print_symbol), end="")
-                print("")
-        return ("")
+                    [hash_print.append("{}".format(self.print_symbol)) for col in range(self.width)]
+                    if row != self.height - 1:
+                        hash_print.append("\n")
+        return ("".join(hash_print))
 
     def __repr__(self):
         ''' string representation '''
