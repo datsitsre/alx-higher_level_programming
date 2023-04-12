@@ -3,6 +3,10 @@
 
 class MyList(list):
     ''' create an inheritance list '''
-    
+   
+    def __init__(self):
+        list.__init__(self)
+
+
     def print_sorted(self):
-        return self.sort()
+        print(sorted(self))
