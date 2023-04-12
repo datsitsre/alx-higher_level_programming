@@ -9,8 +9,7 @@ class BaseGeometry:
 
         Method:
             Area
-    '''
-    '''    def __init__(self, name, value):
+        def __init__(self, name, value):
         self.name = name
         self.value = value
     '''
@@ -21,7 +20,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         ''' Method to value date method '''
-        if type != int:
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(value))
+            raise ValueError("{} must be greater than 0".format(name))
