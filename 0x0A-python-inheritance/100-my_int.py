@@ -10,9 +10,9 @@ class MyInt(int):
 
     def __ne__(self, value):
         ''' Not equal operator  to equal operator'''
-        return self.real == value
+        return self.num == value
 
 
     def __eq__(self, value):
         '''  Equal operator  to no equal operator'''
-        return self.real != value
+        return self.num != value
