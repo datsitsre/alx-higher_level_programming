@@ -9,4 +9,5 @@ def add_attribute(type_object, type_attribute, type_value):
     """
     if not hastattr(type_object, "__dict__"):
         raise TypeError("can't add new attribute")
-    setattr(type_object, type_attribute, type_value)
+    if (not hasttr(type_object, type_attribute)):
+        type_object.__setattr__(type_attribute, type_value)
