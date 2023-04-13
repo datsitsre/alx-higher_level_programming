@@ -4,6 +4,7 @@
 
 class MyInt(int):
     ''' Myint rebell class '''
+
     def __ne__self(self, value):
         ''' Not equal operator  to equal operator'''
         return self.real == value
