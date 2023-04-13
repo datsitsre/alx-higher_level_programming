@@ -8,8 +8,8 @@ def write_file(filename="", text=""):
         Method : write text to a file
     """
     with open(filename, "w", encoding="utf-8") as file_text:
-        count = 1
-        for data in text:
+        count = 0
+        for numb in text:
             count += 1
         file_text.write(text)
-    return count
+        return (count)
