@@ -9,12 +9,6 @@ def append_after(filename="", search_string="", new_string=""):
         for line in file_text:
             empty_string += line
             if search_string in line:
-                empty_string +=  search_string
+                empty_string += search_string
     with open(filename, "w") as file_write:
         file_write.write(empty_string)
-
-
-
-    
-
-
