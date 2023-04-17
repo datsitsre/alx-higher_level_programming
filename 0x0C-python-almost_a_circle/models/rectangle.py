@@ -77,3 +77,50 @@ class Rectangle(Base):
     def area(self):
         """ Calculate the area """
         return self.__width * self.__height
+
+    def display(self):
+        """ Rectangle instance
+                    return
+                    symbol = "#"
+               for high in range(self.__height):
+                    for widt in range(self.__width):
+                    print("{}".format(symbol), end="")
+                    print("")
+         """
+        hash_value = "#"
+        rect = ""
+
+        print("\n" * self.y, end="")
+
+        for high in range(self.height):
+            rect += (" " * self.x) + (hash_value * self.width) + "\n"
+        print(rect)
+
+    def __str__(self):
+        """return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
+
+    def update(self, *args, **kwargs):
+        """ Update the attributes """
+        length = len(args)
+        if length == 0:
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
+
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
+
+    def to_dictionary(self):
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+
+                'width': self.width}

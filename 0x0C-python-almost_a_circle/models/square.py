@@ -18,7 +18,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """ Private class """
-        return self.__size
+        return self.height
 
     @size.setter
     def size(self, value):
@@ -34,3 +34,23 @@ class Square(Rectangle):
         """ overloading method"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                  self.y, self.height)
+
+    def update(self, *args, **kwargs):
+
+        """ Update the attributes """
+        length = len(args)
+        if length == 0:
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
+
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
+
+    def to_dictionary(self):
+        """ Sqaure instance to dictionary representation """
+        return {'id': self.id, 'x': self.x, "size": self.width, "y": self.y}
