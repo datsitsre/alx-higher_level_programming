@@ -38,8 +38,32 @@ class Base:
                              for list_dict in list_objs]
                 typeJson.write(Base.to_json_string(list_objs))
 
+    @staticmethod
     def from_json_string(json_string):
         """ Json list reprensation """
         if json_string is None or json_string == []:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Dictionary to Instance """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
+    @classmethod
+    def load_from_file(cls):
+        """ Files to instance """
+        refer_file = str(cls.__name__) + ".json"
+        try:
+            with open(refer_file, "r") as file_json:
+                list_dicts = Base.from_json_string(file_json.read())
+                return [cls.create(**data) for data in list_dicts]
+        except IOError:
+            return []
+
