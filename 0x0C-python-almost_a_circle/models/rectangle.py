@@ -1,4 +1,4 @@
-''' import super class '''
+""" import super class """
 from models.base import Base
 
 
