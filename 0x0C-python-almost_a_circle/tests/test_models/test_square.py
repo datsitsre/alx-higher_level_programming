@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 # test_square.py
 
+"""
+test sqaure
+"""
+
 
 import io
 import sys
