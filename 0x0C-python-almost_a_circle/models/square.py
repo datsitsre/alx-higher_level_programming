@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ Import the module base """
 from models.base import Base
 from models.rectangle import Rectangle

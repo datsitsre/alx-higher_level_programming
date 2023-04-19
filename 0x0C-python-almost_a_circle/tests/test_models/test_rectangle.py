@@ -6,6 +6,7 @@ file them
 """
 
 import sys
+import io
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
