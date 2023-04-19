@@ -96,8 +96,8 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
 
         for high in range(self.height):
-            rect += (" " * self.x) + (hash_value * self.width) + "\n"
-        print(rect)
+            rect += ("" * self.x) + (hash_value * self.width) + "\n"
+        print(rect, end="")
 
     def __str__(self):
         """return [Rectangle] (<id>) <x>/<y> - <width>/<height> """
