@@ -72,7 +72,7 @@ class Base:
             return []
 
     @classmethod
-    def save_t_file(cls, list_objs):
+    def save_to_file_csv(cls, list_objs):
         """ write to csv """
         nameOfFile = cls.__name__ + ".csv"
         with open(nameOfFile, "w", newline="") as file_csv:
@@ -83,7 +83,7 @@ class Base:
                     names_fields = ["id", "width", "height", "x", "y"]
                 else:
                     names_fields = ["id", "size", "x", "y"]
-                writer = csv.DictWriter(file_csv, names_fields=names_fields)
+                writer = csv.DictWriter(file_csv, fieldnames=names_fields)
                 for data in list_objs:
                     writer.writerow(data.to_dictionary())
 
@@ -99,7 +99,7 @@ class Base:
                     names_field = ["id", "width", "height", "x", "y"]
                 else:
                     names_field = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(file_csv, names_field=names_field)
+                list_dicts = csv.DictReader(file_csv, fieldnames=names_field)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ import super class """
-from models.base import Base
+
+from models.base  import Base
+import turtle
 
 
 class Rectangle(Base):

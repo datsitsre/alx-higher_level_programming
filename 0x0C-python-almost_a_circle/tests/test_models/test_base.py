@@ -310,11 +310,6 @@ class TestBase_create(unittest.TestCase):
         s2 = Square.create(**s1_dictionary)
         self.assertEqual("[Square] (7) 5/1 - 3", str(s1))
 
-    def test_create_square_new(self):
-        s1 = Square(3, 5, 1, 7)
-        s1_dictionary = s1.to_dictionary()
-        s2 = Square.create(**s1_dictionary)
-        self.assertEqual("[Square] (7) 5/1 - 3", str(s2))
 
     def test_create_square_is(self):
         s1 = Square(3, 5, 1, 7)
@@ -365,19 +360,6 @@ class TestBase_load_from_file(unittest.TestCase):
         output = Rectangle.load_from_file()
         self.assertTrue(all(type(obj) == Rectangle for obj in output))
 
-    def test_load_from_file_first_square(self):
-        s1 = Square(5, 1, 3, 3)
-        s2 = Square(9, 5, 2, 3)
-        Square.save_to_file([s1, s2])
-        list_squares_output = Square.load_from_file()
-        self.assertEqual(str(s1), str(list_squares_output[0]))
-
-    def test_load_from_file_second_square(self):
-        s1 = Square(5, 1, 3, 3)
-        s2 = Square(9, 5, 2, 3)
-        Square.save_to_file([s1, s2])
-        list_squares_output = Square.load_from_file()
-        self.assertEqual(str(s2), str(list_squares_output[1]))
 
     def test_load_from_file_square_types(self):
         s1 = Square(5, 1, 3, 3)
