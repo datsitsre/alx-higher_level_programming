@@ -8,10 +8,6 @@ class Square extends SqaureObje {
     super(size, size);
   }
 
-  double () {
-    super.double();
-  }
-
   charPrint (c = 'X') {
     super.print(c);
   }
