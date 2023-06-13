@@ -4,3 +4,5 @@
  * Rectangle object
  */
 class Rectangle {}
+
+module.exports = Rectangle;
