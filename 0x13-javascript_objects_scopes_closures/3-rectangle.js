@@ -11,9 +11,14 @@ class Rectangle {
   }
 
   print () {
-    const myVar = '';
-    for (let index = 0; index < myVar; index++) {
-      console.log('X'.repeat(myVar));
+    for (let index = 0; index < this.height; index++) {
+      let index2 = 0;
+      for (; index2 < this.width; ++index2) {
+        process.stdout.write('X');
+      }
+      if (index2 === this.width) {
+        console.log('');
+      }
     }
   }
 }
