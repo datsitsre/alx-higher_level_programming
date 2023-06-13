@@ -8,6 +8,10 @@ class Square extends Rectangle {
     super(size, size);
   }
 
+  double () {
+    super.double();
+  }
+
   charPrint (c = 'X') {
     super.print(c);
   }
