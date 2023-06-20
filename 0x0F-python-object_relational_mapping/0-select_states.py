@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-List states from thr database
+List states from the database
 """
 
 import MySQLdb
-import sys 
+import sys
 
 
 if __name__ = "__main__":
