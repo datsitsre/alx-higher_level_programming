@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 List states from thr database
-hbtn_0e_0_usa
 """
 import MySQLdb
 import sys 
