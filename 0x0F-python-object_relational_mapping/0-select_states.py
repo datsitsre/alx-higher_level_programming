@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 List states from the database
 """
