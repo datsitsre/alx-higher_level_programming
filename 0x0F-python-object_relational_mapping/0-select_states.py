@@ -2,8 +2,10 @@
 """
 List states from thr database
 """
+
 import MySQLdb
 import sys 
+
 
 if __name__ = "__main__":
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
