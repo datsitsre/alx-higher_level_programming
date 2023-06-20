@@ -3,7 +3,6 @@
 List states from thr database
 hbtn_0e_0_usa
 """
-# imporţ libs
 import MySQLdb
 from sys import argv
 
