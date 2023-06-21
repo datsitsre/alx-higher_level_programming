@@ -11,8 +11,8 @@ Base = declarative_base()
 
 class State(Base):
     """
-        Class : State
-        Attributes : id , name
+    Class : State
+    Attributes : id , name
     """
     __tablename__ = 'states'
 
