@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-""" List all states with name starting
-with N from `hbtn_0e_0_usa` """
+"""
+List states with name starting
+with N from `hbtn_0e_0_usa` 
+"""
 
 import MySQLdb
 from sys import argv
