@@ -5,13 +5,14 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
+    """ the main code """
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states")
-    rows = cur.fetchall()
+    cur_db = db.cursor()
+    cur_db.execute("SELECT * FROM states")
+    rows = cur_db.fetchall()
     for row in rows:
         print(row)
 
-    cur.close()
+    cur_db.close()
     db.close()
