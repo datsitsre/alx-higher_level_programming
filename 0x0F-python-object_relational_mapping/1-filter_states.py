@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List states with name starting
+List states with `name` starting
 with N from `hbtn_0e_0_usa` 
 """
 
