@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script lists all states
+This script lists all states hbtn_0e_0_usa
 """
 
 import MySQLdb
@@ -10,9 +10,12 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
                          passwd=argv[2], db=argv[3])
 
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states")
-    rows = cur.fetchall()
+    db_cur = db.cursor()
+    db_cur.execute("SELECT * FROM states")
+    rows = db_cur.fetchall()
 
     for row in rows:
         print(row)
+
+    cur.close()
+    conn.close()
