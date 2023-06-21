@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List states that takes arguments and display all values
+List cities that takes arguments and display all values
 displaying hbtn_0e_0_usa
 """
 
