@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List all `states` from database `hbtn_0e_0_usa`
+lists all states from the database hbtn_0e_0_usa
 """
 
 import MySQLdb
