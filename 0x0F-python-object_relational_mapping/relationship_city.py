@@ -2,9 +2,9 @@
 """
 Define the City class and Base instance of declarative_base()
 """
+
 from relationship_state import Base, State
 from sqlalchemy import Column, Integer, String, ForeignKey
-
 
 class City(Base):
     """
