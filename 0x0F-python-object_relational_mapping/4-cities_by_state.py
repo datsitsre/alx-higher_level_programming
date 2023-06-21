@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-List cities that takes arguments and display all values
-displaying hbtn_0e_0_usa
+List `cities` from `hbtn_0e_0_usa`
 """
 
 import MySQLdb
