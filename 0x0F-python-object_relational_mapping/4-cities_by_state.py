@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List `cities` from database `hbtn_0e_0_usa`
+List all `states` from database `hbtn_0e_0_usa`
 """
 
 import MySQLdb
