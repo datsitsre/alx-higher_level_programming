@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Define the state class
+Define the state class and Base instance of declarative_base()
 """
 
 from sqlalchemy import Column, Integer, String
