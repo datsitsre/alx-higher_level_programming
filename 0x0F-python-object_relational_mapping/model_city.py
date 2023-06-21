@@ -2,6 +2,7 @@
 """
 Define the City class and Base instance of declarative_base()
 """
+
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String, ForeignKey
 
