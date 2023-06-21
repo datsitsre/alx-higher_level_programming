@@ -1,22 +1,20 @@
 #!/usr/bin/python3
 """
-Define the City class and Base instance of declarative_base()
+Class State class
 """
 
-from sqlalchemy import Column, Integer, String, MetaData
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
 
-datametada = MetaData()
-Base = declarative_base(metadata=datametada)
+Base = declarative_base()
 
 
-class City(Base):
+class State(Base):
+    """State class
+    Attributes: __tablename__ id name cities 
     """
-    Class : City
-    Attributes : id , name, state_id
-    """
-    __tablename__ = 'cities'
+    __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
