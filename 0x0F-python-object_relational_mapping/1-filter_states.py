@@ -5,7 +5,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    """ the mysql code """
+    """the mysql code"""
     db_connect = MySQLdb.connect(host="localhost", user=argv[1], db=argv[2]
                                  passwd=argv[3], port=3306)
 
